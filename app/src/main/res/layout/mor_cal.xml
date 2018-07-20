@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/purchase_price"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:hint="Enter Purchase Price"
+        android:inputType="number"/>
+    <TextView
+        android:id="@+id/text"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/purchase_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select down payment type"/>
+    <RadioGroup
+        android:id="@+id/dow_pay_type"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/text"
+        android:layout_below="@+id/purchase_price"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/perc"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="%"/>
+        <RadioButton
+            android:id="@+id/rupe"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="₹"/>
+    </RadioGroup>
+    <EditText
+        android:id="@+id/down_payment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Enter Down Payment"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/dow_pay_type"
+        android:inputType="number"/>
+    <EditText
+        android:id="@+id/annual_rate"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/down_payment"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:hint="Enter Annual Interest Rate"
+        android:inputType="number"/>
+    <EditText
+        android:id="@+id/loan_period"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/annual_rate"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:hint="Enter Loan Period(Years)"
+        android:inputType="number"/>
+    <EditText
+        android:id="@+id/add_fees"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/loan_period"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:hint="Additional Financed Fees"
+        android:inputType="number"/>
+    <Button
+        android:id="@+id/mor_reset"
+        android:layout_below="@+id/add_fees"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="RESET"
+        android:layout_width="match_parent"/>
+
+    <Button
+        android:id="@+id/mor_cal"
+        android:layout_below="@+id/mor_reset"
+        android:layout_height="wrap_content"
+        android:text="CALCULATE"
+        android:layout_width="match_parent"/>
+</RelativeLayout>
